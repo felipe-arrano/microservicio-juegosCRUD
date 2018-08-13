@@ -40,7 +40,7 @@ public class VideoJuegoController {
     public ResponseEntity<Boolean> eliminarVideoJuego(@RequestParam("idVideoJuego") int idVideoJuego){
         System.out.println("-> eliminarVideoJuego");
 
-        return ResponseEntity.ok(true);
+        return ResponseEntity.ok(videoJuegoService.eliminarVideoJuego(idVideoJuego));
     }
 
 }
