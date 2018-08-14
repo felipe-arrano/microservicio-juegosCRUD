@@ -1,5 +1,8 @@
 package com.farrano.microservicio.videojuego.model;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class VideoJuego {
 
     private int id;

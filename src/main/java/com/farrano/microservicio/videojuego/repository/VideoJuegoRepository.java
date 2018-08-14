@@ -7,5 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface VideoJuegoRepository extends MongoRepository<VideoJuego, String> {
 
-
+    VideoJuego findById(int id);
+    void deleteById(int id);
 }

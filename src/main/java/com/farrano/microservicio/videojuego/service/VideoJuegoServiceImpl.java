@@ -12,25 +12,27 @@ public class VideoJuegoServiceImpl implements VideoJuegoService {
     private VideoJuegoRepository videoJuegoRepository;
 
     @Override
-    public Boolean crearVideoJuego(VideoJuego videoJuego){
+    public VideoJuego crearVideoJuego(VideoJuego videoJuego){
 
-        return videoJuegoRepository.insert();
+        return videoJuegoRepository.insert(videoJuego);
     }
 
     @Override
     public VideoJuego obtenerVideoJuego(int idVideoJuego) {
 
-        return null;
+        return videoJuegoRepository.findById(idVideoJuego);
     }
 
     @Override
     public VideoJuego actualizarVideoJuego(VideoJuego videoJuego) {
 
-        return null;
+        return videoJuegoRepository.save(videoJuego);
     }
 
     @Override
-    public Boolean eliminarVideoJuego(int idVideoJuego) {
+    public Void eliminarVideoJuego(int idVideoJuego) {
+
+        videoJuegoRepository.deleteById(idVideoJuego);
 
         return null;
     }
